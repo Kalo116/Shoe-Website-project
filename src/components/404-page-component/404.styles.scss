@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'MicroExtendFLF';
+    src: url('../../fonts/MicroExtendFLF\ \(1\).ttf');
+}
+
+.not-found-container {
+    margin: 0 auto;
+    width: 900px;
+    background: #fff;
+    border-radius: 4rem;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 675px;
+
+    .not-found-title {
+        font-family: 'MicroExtendFLF';
+        font-size: 30px;
+    }
+
+    .not-found-message {
+        font-size: 20px;
+    }
+
+    .not-found-link {
+        font-size: 20px;
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: red;
+        }
+    }
+}

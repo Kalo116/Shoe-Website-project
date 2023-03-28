@@ -1,0 +1,232 @@
+/* Main section */
+@font-face {
+    font-family: 'MicroExtendFLF';
+    src: url('../../../fonts/MicroExtendFLF\ \(1\).ttf');
+}
+
+#main-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0px 190px;
+    margin-top: 3rem;
+
+    .main-info {
+        color: #fff;
+        width: 700px;
+        margin-right: 5rem;
+
+        .main-info-title {
+            font-size: 93px;
+            line-height: 1.10;
+            margin-bottom: 0;
+            margin-top: 0;
+            font-family: 'MicroExtendFLF';
+
+            span {
+                color: #fa5e54;
+            }
+        }
+
+        .main-info-description {
+            font-size: 16px;
+            width: 70%;
+            line-height: 30px;
+            margin-bottom: 26px;
+        }
+
+        .main-button {
+            border: none;
+            padding: 20px 32px;
+            font-size: 19px;
+            border-radius: 7px;
+            color: #fff;
+            background: linear-gradient(144deg, rgba(165, 129, 255, 1) 38%, rgba(252, 120, 127, 1) 73%);
+            cursor: pointer;
+
+            span {
+                margin-right: 0.75rem;
+            }
+        }
+
+    }
+
+    .main-img-wrapper {
+        width: 1163px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .blue-arrow-wrapper {
+        position: absolute;
+        bottom: 90px;
+        left: 25rem;
+        transform: rotate(29deg);
+    }
+
+    .review {
+        position: absolute;
+        color: #fff;
+        bottom: -2rem;
+        left: 28rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .review-top {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+
+            .top-info {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 20px;
+
+                span {
+                    font-size: 27px;
+                    font-weight: bold;
+                    color: #f86052;
+                }
+
+                .stars {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 4px;
+                    color: yellow;
+                }
+            }
+        }
+
+        .review-bottom-description {
+            margin-top: 8px;
+            font-size: 22px;
+        }
+    }
+
+    .orange-arrow-wrapper {
+        position: absolute;
+        bottom: 2rem;
+        right: 27rem;
+        transform: rotate(77deg);
+        width: 206px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .discount {
+        position: absolute;
+        color: #fff;
+        width: 246px;
+        background: rgb(255, 255, 255, 0.3);
+        padding: 24px;
+        border-radius: 12px;
+        bottom: 2rem;
+        right: 10.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .discount-info {
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 7px;
+            margin-top: 0;
+        }
+
+        .discount-description {
+            margin-top: 0;
+            margin-bottom: 0;
+            font-size: 18px;
+            line-height: 23px;
+            color: #b0b0ae;
+        }
+    }
+}
+
+@media screen and (max-width: 1680px) {
+    #main-section {
+        .main-info {
+            .main-info-title {
+                font-size: 73px;
+            }
+
+            .main-button {
+                padding: 16px 28px;
+                font-size: 17px;
+            }
+        }
+
+        .main-img-wrapper {
+            width: 830px;
+        }
+    }
+}
+
+@media screen and (max-width: 1530px) {
+    #main-section {
+        padding: 0px 120px;
+    }
+}
+
+
+@media screen and (max-width: 1365px) {
+    #main-section {
+        .main-img-wrapper {
+            display: none;
+        }
+
+        .main-info {
+            width: 100%;
+            margin-right: 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .main-info-title {
+                text-align: center;
+            }
+
+            .main-info-description {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    #main-section {
+        padding: 0px 40px;
+
+        .main-info {
+
+            .main-info-title {
+                font-size: 52px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 355px) {
+    #main-section {
+
+        .main-info {
+
+            .main-info-title {
+                font-size: 45px;
+            }
+        }
+    }
+}

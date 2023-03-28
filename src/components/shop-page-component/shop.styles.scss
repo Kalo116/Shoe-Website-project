@@ -1,0 +1,122 @@
+.shop-title {
+    text-align: center;
+    font-size: 40px;
+    margin: 3rem 0 0 0;
+    font-family: "MicroExtendFLF";
+    color: #fff;
+}
+
+.shop-container {
+    padding: 0px 190px;
+    display: flex;
+    flex-wrap: wrap;
+    color: #fff;
+    margin-top: 3rem;
+    gap: 3rem;
+
+    .left-section {
+        flex: 1;
+
+        .search-input {
+            padding: 10px;
+            width: 200px;
+            border: 1px solid gray;
+            outline: none;
+            border-radius: 10px;
+        }
+
+        .left-section-title {
+            font-size: 30px;
+            font-weight: 300;
+        }
+
+        .shop-categories {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            list-style: none;
+            padding: 0;
+
+            .shop-category {
+                cursor: pointer;
+                font-size: 20px;
+                font-weight: 300;
+                padding: 5px;
+            }
+        }
+    }
+
+    .shop-content {
+        flex: 3;
+
+        .products {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            align-items: center;
+
+            .product {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+                box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.75);
+                padding: 16px 0px;
+                border-radius: 10px;
+
+                img {
+                    width: 250px;
+                    height: 170px;
+                    object-fit: contain;
+                }
+
+                .product-name {
+                    font-weight: 300;
+                }
+
+                .product-price-section {
+
+                    .product-btn {
+                        padding: 8px 11px;
+                        background-color: #4495fd;
+                        border: none;
+                        border-radius: 7px;
+                        color: #fff;
+                        cursor: pointer;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1876px) {
+    .shop-container {
+        padding: 0px 120px;
+    }
+}
+
+
+@media screen and (max-width: 1760px) {
+    .shop-container {
+        .shop-content {
+            flex: 4 1;
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .shop-container {
+        padding: 0px 80px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .shop-container {
+        padding: 0px 40px;
+        justify-content: center;
+        align-items: center;
+    }
+}

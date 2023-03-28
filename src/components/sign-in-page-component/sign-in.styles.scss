@@ -1,0 +1,151 @@
+@font-face {
+    font-family: 'MicroExtendFLF';
+    src: url('../../fonts/MicroExtendFLF\ \(1\).ttf');
+}
+
+.sign-in-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    margin-bottom: 43rem;
+
+    .sign-in-img-container {
+        width: 500px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-top-left-radius: 4rem;
+            border-bottom-left-radius: 4rem;
+        }
+    }
+
+    .sign-in-info {
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        color: black;
+        background-color: #fff;
+        border-top-right-radius: 4rem;
+        border-bottom-right-radius: 4rem;
+        padding: 2rem;
+
+        .sign-in-title {
+            font-family: 'MicroExtendFLF';
+            margin-bottom: 9px;
+        }
+
+        .sign-in-post-title {
+            margin-bottom: 2rem;
+        }
+
+        .sign-in-form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            .form-label {
+                margin-bottom: 6px;
+            }
+
+            .form-input {
+                width: 100%;
+                margin-bottom: 2rem;
+                padding: 5px;
+                font-size: 18px;
+                border: none;
+                border-bottom: 1px solid black;
+            }
+
+            .form-input:focus {
+                outline: none;
+            }
+
+            .sing-in-button-container {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                .sign-in-btn {
+                    padding: 10px 17px;
+                    border: none;
+                    border-radius: 7px;
+                    font-size: 16px;
+                    cursor: pointer;
+                    background: linear-gradient(144deg, rgba(165, 129, 255, 1) 38%, rgba(252, 120, 127, 1) 73%);
+                    color: #fff;
+
+                    i {
+                        margin-left: 4px;
+                    }
+                }
+            }
+        }
+
+        .sign-in-p {
+            margin: 0;
+            margin-top: 5rem;
+
+            a {
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            a:hover {
+                color: red;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1100px) {
+    .sign-in-img-container {
+        display: none;
+    }
+
+    .sign-in-info {
+        border-top-left-radius: 4rem;
+        border-bottom-left-radius: 4rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sign-in-container {
+        .sign-in-info {
+            width: 300px;
+
+            .sign-in-title {
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .sign-in-container {
+        .sign-in-info {
+            width: 270px;
+
+            .sign-in-form {
+                .sing-in-button-container {
+                    flex-direction: column;
+                    gap: 1rem;
+                }
+            }
+
+            .sign-in-title {
+                text-align: center;
+            }
+
+            .sign-in-p {
+                margin-top: 3rem;
+            }
+        }
+    }
+}

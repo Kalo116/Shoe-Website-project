@@ -1,0 +1,196 @@
+/* Comments Section */
+@font-face {
+    font-family: 'MicroExtendFLF';
+    src: url('../../../fonts/MicroExtendFLF\ \(1\).ttf');
+}
+
+#comments {
+    margin-top: 7rem;
+    background-color: #4158D0;
+    background-image: linear-gradient(180deg, #101e67 8%, #8b1283 44%, #22246a 100%);
+    padding-bottom: 30px;
+
+
+    .comments-title-section {
+        font-family: 'MicroExtendFLF';
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 42rem;
+        margin-bottom: 2rem;
+
+        .comments-title {
+            font-size: 37px;
+        }
+
+        .comments-arrows {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            font-size: 21px;
+
+            .fa-arrow-left {
+                background: transparent;
+                border: 2px solid #635956;
+                padding: 7px 10px;
+                border-radius: 6px;
+            }
+
+            .fa-arrow-right {
+                background: linear-gradient(144deg, rgba(165, 129, 255, 1) 38%, rgba(252, 120, 127, 1) 73%);
+                border: 2px solid #635956;
+                padding: 7px 10px;
+                border-radius: 6px;
+            }
+        }
+    }
+
+    .comments {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        color: #fff;
+        padding: 0 10rem;
+        flex-wrap: wrap;
+
+        .comment {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 40%;
+
+            .comment-img-wrapper-female {
+                width: 130px;
+                height: 130px;
+                border-radius: 100%;
+                background-image: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: -31px;
+            }
+
+            .comment-img-wrapper-male {
+                width: 130px;
+                height: 130px;
+                border-radius: 100%;
+                background-image: url('https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: 0px;
+            }
+
+            .comment-info {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                .comment-info-p {
+                    text-align: center;
+                    line-height: 25px;
+                    font-size: 16px;
+                    color: #ffffff;
+                }
+
+                .comment-info-stars {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 8px;
+                    color: #f75d54;
+                }
+
+                .comment-info-writter {
+                    font-size: 20px;
+                    margin: 9px 0px;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1460px) {
+    #comments {
+        .comments-title-section {
+            gap: 22rem;
+        }
+    }
+}
+
+@media screen and (max-width: 1380px) {
+    #comments {
+        .comments-title-section {
+            gap: 13rem;
+        }
+
+        .comments {
+            justify-content: space-between;
+        }
+    }
+}
+
+@media screen and (max-width: 1260px) {
+    #comments {
+        .comments-title-section {
+            .comments-title{
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #comments {
+
+        .comments-title-section {
+            gap: 7rem;
+        }
+
+        .comments {
+            padding: 0 5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    #comments {
+
+        .comments-title-section {
+            gap: 3rem;
+        }
+
+        .comments {
+            padding: 0 3rem;
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    #comments {
+        .comments-title-section {
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-bottom: 3rem;
+
+            .comments-title {
+                text-align: center;
+            }
+        }
+
+
+        .comments {
+            padding: 0;
+            flex-direction: column;
+            gap: 2rem;
+
+            .comment {
+                width: 80%;
+            }
+        }
+    }
+}

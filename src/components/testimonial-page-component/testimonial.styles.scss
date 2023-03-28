@@ -1,0 +1,229 @@
+.testimonial {
+    margin-top: 3rem;
+    color: #fff;
+    padding: 0px 190px;
+
+    .testimonial-title {
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 0;
+        font-family: "MicroExtendFLF";
+    }
+
+    .testimonial-post-title {
+        text-align: center;
+        font-size: 17px;
+        margin-top: 10px;
+        margin-bottom: 4rem;
+        font-weight: 300;
+    }
+
+    .testimonial-comments {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 3rem;
+
+        .testimonial-comment {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            .testimonial-img-wrapper.selena {
+                width: 400px;
+                height: 400px;
+                background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Selena_Gomez_-_Walmart_Soundcheck_Concert.jpg/394px-Selena_Gomez_-_Walmart_Soundcheck_Concert.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius: 50%;
+                box-shadow: 0px 0px 39px 5px #f75d54;
+            }
+
+            .testimonial-img-wrapper.rock {
+                width: 400px;
+                height: 400px;
+                background-image: url('https://hips.hearstapps.com/hmg-prod/images/dwayne-johnson-attends-the-jumanji-the-next-level-uk-film-news-photo-1575726701.jpg?resize=1200:*');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: -4rem 0rem;
+                border-radius: 50%;
+                box-shadow: 0px 0px 39px 5px #f75d54;
+            }
+
+            .testimonial-img-wrapper.messi {
+                width: 400px;
+                height: 400px;
+                background-image: url('https://www.bgonair.bg/media/files/resized/article/640x/ea0/3c3d3e6b486552360567ff301da83ea0-9088736.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: -9rem 0rem;
+                border-radius: 50%;
+                box-shadow: 0px 0px 39px 5px #f75d54;
+            }
+
+
+
+            .testimonial-comment-info {
+                width: 700px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                flex-wrap: wrap;
+                border-left: 4px solid #f75d54;
+                padding-left: 15px;
+
+                .testimonial-name {
+                    margin-bottom: 10px;
+                }
+
+                .testimonial-description {
+                    color: #adadad;
+                }
+
+                .testimonial-comment-info-stars {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    color: #f75d54;
+                    margin-bottom: 1rem;
+                }
+            }
+
+            .testimonial-comment-info-reverse {
+                width: 700px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                flex-wrap: wrap;
+                border-right: 4px solid #f75d54;
+                padding-right: 15px;
+
+                .testimonial-name {
+                    margin-bottom: 10px;
+                }
+
+                .testimonial-description {
+                    color: #adadad;
+                }
+
+                .testimonial-comment-info-stars {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    color: #f75d54;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 1550px) {
+    .testimonial {
+        padding: 0;
+
+        .testimonial-comments {
+            .testimonial-comment.selena {
+
+                .testimonial-img-wrapper.selena {
+                    width: 300px;
+                    height: 300px;
+                    background-position: 0rem 0rem;
+                }
+            }
+
+            .testimonial-comment.messi {
+
+                .testimonial-img-wrapper.messi {
+                    width: 300px;
+                    height: 300px;
+                    background-position: -7rem 0rem;
+                }
+            }
+
+
+            .testimonial-comment.rock {
+                gap: 2rem;
+
+                .testimonial-img-wrapper.rock {
+                    width: 300px;
+                    height: 300px;
+                    background-position: -3rem 0rem;
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .testimonial {
+        .testimonial-comments {
+            .testimonial-comment.selena {
+                flex-direction: column;
+                gap: 3rem;
+            }
+
+            .testimonial-comment.messi {
+                flex-direction: column;
+                gap: 3rem;
+            }
+
+
+            .testimonial-comment.rock {
+                flex-direction: column-reverse;
+                gap: 3rem;
+
+                .testimonial-comment-info-reverse {
+                    border-right: none;
+                    padding-right: 0;
+                    border-left: 4px solid #f75d54;
+                    padding-left: 15px;
+                }
+            }
+
+        }
+    }
+
+}
+
+@media screen and (max-width: 730px) {
+    .testimonial {
+        .testimonial-post-title{
+            padding: 9px;
+        }
+        .testimonial-comments {
+            .testimonial-comment.selena {
+                width: 100%;
+
+                .testimonial-comment-info {
+                    width: 95%;
+                    padding-left: 5px;
+                }
+            }
+
+            .testimonial-comment.messi {
+                width: 100%;
+
+                .testimonial-comment-info {
+                    width: 95%;
+                    padding-left: 5px;
+                }
+            }
+
+
+            .testimonial-comment.rock {
+                width: 100%;
+
+                .testimonial-comment-info-reverse {
+                    width: 95%;
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+
+}

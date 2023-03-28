@@ -1,0 +1,110 @@
+.contact-info-container {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+
+    i {
+        font-size: 25px;
+    }
+
+    .contact-info-title {
+        margin: 0;
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .contact-info-p {
+        margin: 0;
+    }
+
+    .contact-info-post-title {
+        font-weight: 200;
+    }
+
+    #headquaters {
+        .headquaters-info {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+    }
+
+    #phone {
+        .phone-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            .phones {
+                display: flex;
+                flex-direction: column;
+                gap: 9px;
+            }
+        }
+    }
+
+    #support {
+        .support-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            .emails {
+                display: flex;
+                flex-direction: column;
+                gap: 9px;
+            }
+        }
+    }
+
+    #follow {
+        .contact-info-icons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            i {
+                border: 1px solid;
+                padding: 10px;
+                border-radius: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+
+}
+
+
+
+@media screen and (max-width: 990px) {
+
+    .contact-info-container {
+        align-items: center;
+
+        #headquaters {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #phone {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #support {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #follow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}

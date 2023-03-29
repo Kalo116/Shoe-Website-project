@@ -5,7 +5,7 @@ const ShopList = ({ shoes }) => {
         <div className="shop-content">
             <div className="products">
                 {shoes.map((shoe) => {
-                    return <ShopItem key={shoe.id} shoe={shoe} />
+                    return <ShopItem key={shoe.id} shoe={shoe.data} />
                 })}
             </div>
         </div>

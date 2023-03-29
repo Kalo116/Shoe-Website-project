@@ -1,17 +1,93 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useState } from 'react';
 
 const ShopCategories = ({
-    onChangeHandler,
     data,
-    search,
-    onCategoryClick,
-    inputValue,
-    onInputChange
+    setFilteredShoes
 }) => {
 
-    const priceList = data.map(el => el.price);
-    const minPrice = Math.min(...priceList);
-    const maxPrice = Math.max(...priceList);
+    const [inputValue, setInputValue] = useState(199);
+    const [search, setSearch] = useState('');
+    const [maxPrice, setMaxPrice] = useState(0);
+    const [minPrice, setMinPrice] = useState(0);
+
+    useEffect(() => {
+        const priceList = data.map(el => el.data.price);
+        setMinPrice(Math.min(...priceList));
+        setMaxPrice(Math.max(...priceList));
+
+    }, [data])
+
+    const onCategoryClick = (e) => {
+        setInputValue(199);
+        const category = e.target.innerText;
+        let newFilteredShoes;
+
+        switch (category) {
+            case 'All':
+                setFilteredShoes(data);
+                break;
+            case 'Nike Air Force 1':
+                newFilteredShoes = data.filter((shoe) => {
+                    return shoe.data.category.includes('Nike Air Force 1');
+                });
+                setFilteredShoes(newFilteredShoes);
+                break;
+
+            case 'Nike Air Max':
+                newFilteredShoes = data.filter((shoe) => {
+                    return shoe.data.category.includes('Nike Air Max');
+                });
+                setFilteredShoes(newFilteredShoes);
+                break;
+
+
+            case 'Nike Air Zoom':
+                newFilteredShoes = data.filter((shoe) => {
+                    return shoe.data.category.includes('Nike Air Zoom');
+                });
+                setFilteredShoes(newFilteredShoes);
+                break;
+
+
+            case 'Nike Air Jordan 1':
+                newFilteredShoes = data.filter((shoe) => {
+                    return shoe.data.category.includes('Nike Air Jordan 1');
+                });
+                setFilteredShoes(newFilteredShoes);
+                break;
+
+
+            case 'Nike Dunk':
+                newFilteredShoes = data.filter((shoe) => {
+                    return shoe.data.category.includes('Nike Dunk');
+                });
+                setFilteredShoes(newFilteredShoes);
+                break;
+
+            default:
+                setFilteredShoes(data);
+                break;
+        }
+    };
+
+
+    const onChangeHandler = (e) => {
+        const searchField = e.target.value.toLocaleLowerCase();
+        setSearch(searchField);
+        const searchFilter = data.filter((shoe) => {
+            return shoe.data.category.toLocaleLowerCase().includes(searchField);
+        })
+        setFilteredShoes(searchFilter);
+    };
+    const onInputChange = (e) => {
+        setInputValue(e.target.value);
+        setFilteredShoes(data.filter((shoe) => {
+            return shoe.data.price <= e.target.value;
+        }))
+    }
+
+   
 
     return (
         <div className="left-section">

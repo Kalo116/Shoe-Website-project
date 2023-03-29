@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 import nikeLogo from '../../assets/nike.png';
 import './header.styles.scss';
-import Dropdown from './DropdownComponent/Dropdown.component';
+import Dropdown from './dropdownComponent/dropdown.component';
 
 export const Header = () => {
     const [toggle, setToggle] = useState(false);

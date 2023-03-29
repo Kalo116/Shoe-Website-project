@@ -1,5 +1,7 @@
+import { deleteDoc, doc } from 'firebase/firestore';
+import { db } from '../../utils/firebase/firebase.utils';
 import React, { useEffect, useState, useContext } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 import { ShoesContext } from '../../contexts/shoes.context';
 import { UserContext } from '../../contexts/user.context';
@@ -11,13 +13,25 @@ export const Details = () => {
     const [shoeDetails, setShoeDetails] = useState({});
     const { data } = useContext(ShoesContext);
     const { currentUser } = useContext(UserContext);
-
+    const navigate = useNavigate()
 
     useEffect(() => {
         const shoeDetailsItem = data.filter((el) => el.id === shoeID);
         setShoeDetails(shoeDetailsItem[0]);
-        console.log(`changed`);
     }, [data]);
+
+    const onDeleteClickHandler = (e) => {
+        e.preventDefault();
+        const confirmed = window.confirm("Are you sure you want to delete this item?");
+        if (confirmed) {
+            const docRef = doc(db, 'shoes', shoeDetails.data.id)
+            deleteDoc(docRef)
+                .then(() => navigate('/shop'))
+                .catch(err => console.log(err))
+        } else {
+            return;
+        }
+    };
 
     return (
         <div id='details'>
@@ -41,7 +55,7 @@ export const Details = () => {
                                 currentUser?.uid === shoeDetails.data?.ownerID &&
                                 <div className="details-buttons">
                                     <a>Edit</a>
-                                    <a>Delete</a>
+                                    <a onClick={onDeleteClickHandler}>Delete</a>
                                 </div>
                             }
                         </div>

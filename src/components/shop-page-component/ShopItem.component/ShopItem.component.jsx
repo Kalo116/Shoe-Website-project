@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import {
     useContext
 } from 'react';
+
 import { UserContext } from '../../../contexts/user.context';
 
 const ShopItem = ({ shoe }) => {
@@ -13,7 +15,7 @@ const ShopItem = ({ shoe }) => {
             <span className='product-name'>{shoe.name}</span>
             <div className="product-price-section">
                 <span className='product-price'>${shoe.price}</span>
-                <button className='product-btn'>Details</button>
+                <Link to={`/shop/details/${shoe.id}`} className='product-btn'>Details</Link>
                 {
                     currentUser?.uid === shoe.ownerID && <span>Yes, I am the owner</span>
                 }

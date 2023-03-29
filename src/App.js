@@ -8,6 +8,7 @@ import { SignUpPage } from './components/sign-up-page-component/sign-up.componen
 import { Contact } from './components/contact-page-component/contact.component';
 import { Testimonial } from './components/testimonial-page-component/testimonial.component';
 import { Shop } from './components/shop-page-component/shop.component';
+import {Details} from './components/details-page-component/details.component';
 import { NotFound } from './components/404-page-component/404.component';
 
 import { Footer } from './components/footer-component/footer.components';
@@ -24,6 +25,7 @@ function App() {
                     <Route path='/contacts' element={<Contact />} />
                     <Route path='/testimonial' element={<Testimonial />} />
                     <Route path='/shop' element={<Shop />} />
+                    <Route path='/shop/details/:shoeID' element={<Details />} />
                     <Route path='*' element={<NotFound />} />
                 </Routes>
             </main>

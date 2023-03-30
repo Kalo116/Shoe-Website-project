@@ -1,7 +1,7 @@
 import { deleteDoc, doc } from 'firebase/firestore';
 import { db } from '../../utils/firebase/firebase.utils';
 import React, { useEffect, useState, useContext } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 
 import { ShoesContext } from '../../contexts/shoes.context';
 import { UserContext } from '../../contexts/user.context';
@@ -13,7 +13,7 @@ export const Details = () => {
     const [shoeDetails, setShoeDetails] = useState({});
     const { data } = useContext(ShoesContext);
     const { currentUser } = useContext(UserContext);
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     useEffect(() => {
         const shoeDetailsItem = data.filter((el) => el.id === shoeID);
@@ -24,7 +24,7 @@ export const Details = () => {
         e.preventDefault();
         const confirmed = window.confirm("Are you sure you want to delete this item?");
         if (confirmed) {
-            const docRef = doc(db, 'shoes', shoeDetails.data.id)
+            const docRef = doc(db, 'shoes', shoeDetails.id);
             deleteDoc(docRef)
                 .then(() => navigate('/shop'))
                 .catch(err => console.log(err))
@@ -54,7 +54,7 @@ export const Details = () => {
                             {
                                 currentUser?.uid === shoeDetails.data?.ownerID &&
                                 <div className="details-buttons">
-                                    <a>Edit</a>
+                                    <Link to={`/shop/edit/${shoeDetails.id}`}>Edit</Link>
                                     <a onClick={onDeleteClickHandler}>Delete</a>
                                 </div>
                             }

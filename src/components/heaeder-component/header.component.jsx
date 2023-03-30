@@ -4,10 +4,10 @@ import { useContext, useState } from 'react';
 import { UserContext } from '../../contexts/user.context';
 
 import { Link } from 'react-router-dom';
+import { Dropdown } from './dropdownComponent/dropdown.component';
 
 import nikeLogo from '../../assets/nike.png';
 import './header.styles.scss';
-import Dropdown from './dropdownComponent/dropdown.component';
 
 export const Header = () => {
     const [toggle, setToggle] = useState(false);
@@ -55,6 +55,14 @@ export const Header = () => {
                             Contacts
                         </Link>
                     </li>
+
+                    {currentUser &&
+                        <li>
+                            <Link to="/create">
+                                Create
+                            </Link>
+                        </li>
+                    }
                 </ul>
 
                 {currentUser

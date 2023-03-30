@@ -1,0 +1,72 @@
+#create {
+    color: #fff;
+    .create-title {
+        text-align: center;
+        font-size: 40px;
+        margin: 3rem 0 0 0;
+        font-family: "MicroExtendFLF";
+        color: #fff;
+    }
+
+    .create-product-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+
+            .form-group {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 20px;
+
+                label {
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                }
+
+                input {
+                    padding: 10px;
+                    border-radius: 5px;
+                    border: none;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                    font-size: 16px;
+
+                }
+
+                select {
+                    padding: 10px;
+                    border-radius: 5px;
+                    border: none;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                    font-size: 16px;
+                    appearance: none;
+                    /* remove default appearance */
+                    background-color: #fff;
+                    background-image: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23007FCC' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+                    /* add down arrow */
+                    background-position: right 10px center;
+                    background-repeat: no-repeat;
+                    background-size: 10px;
+                }
+            }
+
+            button {
+                margin-top: 20px;
+                padding: 10px;
+                border-radius: 5px;
+                border: none;
+                background-color: #0077cc;
+                background: linear-gradient(144deg, rgb(165, 129, 255) 38%, rgb(252, 120, 127) 73%);
+                color: #fff;
+                font-size: 16px;
+                cursor: pointer;
+            }
+        }
+    }
+
+}

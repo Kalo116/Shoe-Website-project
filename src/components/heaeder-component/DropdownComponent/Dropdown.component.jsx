@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Dropdown = ({
+export const Dropdown = ({
     toggle,
     currentUser,
     logOutHandler
@@ -29,6 +29,13 @@ const Dropdown = ({
                         Contacts
                     </Link>
                 </li>
+                {currentUser &&
+                    <li>
+                        <Link to="/create">
+                            Create
+                        </Link>
+                    </li>
+                }
                 <li>
                     {currentUser
                         ? (
@@ -45,5 +52,3 @@ const Dropdown = ({
         </div>
     )
 }
-
-export default Dropdown;

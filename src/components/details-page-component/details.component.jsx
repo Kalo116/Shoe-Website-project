@@ -18,7 +18,7 @@ export const Details = () => {
     useEffect(() => {
         const shoeDetailsItem = data.filter((el) => el.id === shoeID);
         setShoeDetails(shoeDetailsItem[0]);
-    }, [data]);
+    }, [data, shoeID]);
 
     const onDeleteClickHandler = (e) => {
         e.preventDefault();
@@ -55,7 +55,7 @@ export const Details = () => {
                                 currentUser?.uid === shoeDetails.data?.ownerID &&
                                 <div className="details-buttons">
                                     <Link to={`/shop/edit/${shoeDetails.id}`}>Edit</Link>
-                                    <a onClick={onDeleteClickHandler}>Delete</a>
+                                    <button onClick={onDeleteClickHandler}>Delete</button>
                                 </div>
                             }
                         </div>

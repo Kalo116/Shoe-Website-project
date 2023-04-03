@@ -6,7 +6,7 @@ const ShopCategories = ({
     setFilteredShoes
 }) => {
 
-    const [inputValue, setInputValue] = useState(199);
+    const [inputRangeValue, setInputRangeValue] = useState(199);
     const [search, setSearch] = useState('');
     const [maxPrice, setMaxPrice] = useState(0);
     const [minPrice, setMinPrice] = useState(0);
@@ -15,14 +15,12 @@ const ShopCategories = ({
         const priceList = data.map(el => el.data.price);
         setMinPrice(Math.min(...priceList));
         setMaxPrice(Math.max(...priceList));
-
     }, [data])
 
     const onCategoryClick = (e) => {
-        setInputValue(199);
+        setInputRangeValue(199);
         const category = e.target.innerText;
         let newFilteredShoes;
-
         switch (category) {
             case 'All':
                 setFilteredShoes(data);
@@ -80,14 +78,14 @@ const ShopCategories = ({
         })
         setFilteredShoes(searchFilter);
     };
-    const onInputChange = (e) => {
-        setInputValue(e.target.value);
+    const onInputRangeChange = (e) => {
+        setInputRangeValue(e.target.value);
         setFilteredShoes(data.filter((shoe) => {
             return shoe.data.price <= e.target.value;
         }))
     }
 
-   
+
 
     return (
         <div className="left-section">
@@ -119,10 +117,10 @@ const ShopCategories = ({
                 <input type="range" className='price-range'
                     min={minPrice}
                     max={maxPrice}
-                    value={inputValue}
-                    onChange={onInputChange}
+                    value={inputRangeValue}
+                    onChange={onInputRangeChange}
                 />
-                <span className="price-value">${inputValue}</span>
+                <span className="price-value">${inputRangeValue}</span>
             </div>
         </div>
     )

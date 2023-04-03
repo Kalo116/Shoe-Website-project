@@ -35,11 +35,11 @@ export const EditProduct = () => {
         setEditedItem(editedItemDetails);
         setFormFields({
             name: editedItemDetails?.data.name,
-            price: (editedItemDetails?.data.price),
+            price: Number(editedItemDetails?.data.price),
             category: editedItemDetails?.data.category,
             img: editedItemDetails?.data.img
         });
-    }, [data]);
+    }, [data, shoeID]);
 
 
     const handleChange = (e) => {
@@ -64,7 +64,7 @@ export const EditProduct = () => {
         updateDoc(docRef, {
             name,
             img,
-            price,
+            price: Number(price),
             category,
             ownerID: currentUser.uid,
             id: generateRandomID(),

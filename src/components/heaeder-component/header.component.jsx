@@ -13,7 +13,6 @@ export const Header = () => {
     const [toggle, setToggle] = useState(false);
 
     const { currentUser, setCurrentUser } = useContext(UserContext);
-
     const onToggleHandler = () => {
         setToggle((oldState) => {
             return !oldState

@@ -43,7 +43,7 @@ export const CreateProduct = () => {
         addDoc(shoesCollectionRef, {
             name,
             img,
-            price,
+            price: Number(price),
             category,
             ownerID: currentUser.uid,
             id: generateRandomID(),

@@ -1,6 +1,4 @@
 import { useEffect, useState, useContext } from 'react';
-import { onSnapshot } from 'firebase/firestore';
-import { shoesCollectionRef } from '../../utils/firebase/firestore.collections';
 
 import { ShoesContext } from '../../contexts/shoes.context';
 
@@ -12,7 +10,7 @@ import './shop.styles.scss';
 
 export const Shop = () => {
     const [filteredShoes, setFilteredShoes] = useState([]);
-    const { data, setData } = useContext(ShoesContext);
+    const { data } = useContext(ShoesContext);
 
     useEffect(() => {
         setFilteredShoes([...data])
@@ -24,7 +22,6 @@ export const Shop = () => {
             <div className='shop-container'>
                 <ShopCategories
                     data={data}
-                    setData={setData}
                     setFilteredShoes={setFilteredShoes}
                 />
                 <ShopList shoes={filteredShoes} />

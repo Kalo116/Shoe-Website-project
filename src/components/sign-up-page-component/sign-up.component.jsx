@@ -8,12 +8,13 @@ const defaultFormFileds = {
     displayName: '',
     email: '',
     password: '',
-    confirmPassword: ''
+    confirmPassword: '',
+    gender: 'Male'
 }
 
 export const SignUpPage = () => {
     const [formFields, setFormFields] = useState(defaultFormFileds);
-    const { displayName, email, password, confirmPassword } = formFields;
+    const { displayName, email, password, confirmPassword, gender } = formFields;
     const navigate = useNavigate();
 
     const handleChange = (e) => {
@@ -34,7 +35,7 @@ export const SignUpPage = () => {
 
         try {
             const { user } = await createAuthUserWithEmailAndPassword(email, password);
-            await createUserDocument(user, { displayName });
+            await createUserDocument(user, { displayName, gender });
             setFormFields(defaultFormFileds);
             navigate('/');
         } catch (error) {
@@ -109,6 +110,29 @@ export const SignUpPage = () => {
                         onChange={handleChange}
                         required
                     />
+
+                    <div className='radio-buttons'>
+                        <label>
+                            <input
+                                type="radio"
+                                name="gender"
+                                value="Male"
+                                checked={gender === "Male"}
+                                onChange={handleChange}
+                            />
+                            Male
+                        </label>
+                        <label>
+                            <input
+                                type="radio"
+                                name="gender"
+                                value="Female"
+                                checked={gender === "Female"}
+                                onChange={handleChange}
+                            />
+                            Female
+                        </label>
+                    </div>
 
                     <button className='sign-up-btn' type='submit'>
                         Sign up

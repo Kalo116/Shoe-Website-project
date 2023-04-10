@@ -1,0 +1,95 @@
+.profile-title {
+    text-align: center;
+    font-size: 40px;
+    margin: 3rem 0 0 0;
+    font-family: "MicroExtendFLF";
+    color: #fff;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 120px;
+
+    .profile-info {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        justify-content: center;
+        margin-top: 3rem;
+        padding-bottom: 3rem;
+        border-bottom: 1px solid;
+
+        .profile-img-wrapper {
+            border-radius: 50%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+            }
+        }
+
+        .profile-details {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            gap: 17px;
+        }
+    }
+
+    .profile-products {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        color: #fff;
+        margin-top: 3rem;
+
+        .product {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.75);
+            padding: 16px 0px;
+            border-radius: 10px;
+            width: 250px;
+            height: 270px;
+
+            img {
+                width: 250px;
+                height: 170px;
+                object-fit: contain;
+            }
+
+            .product-name {
+                font-weight: 300;
+            }
+
+            .product-price-section {
+                a {
+                    text-decoration: none;
+                }
+
+                .product-btn {
+                    padding: 8px 11px;
+                    background-color: #4495fd;
+                    border: none;
+                    border-radius: 7px;
+                    color: #fff;
+                    cursor: pointer;
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        .no-cards-title {
+            margin: 0 auto;
+        }
+    }
+}

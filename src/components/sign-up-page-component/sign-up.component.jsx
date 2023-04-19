@@ -28,6 +28,10 @@ export const SignUpPage = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+        if (displayName === '' || email === '' || password === '' || confirmPassword === '' || gender === '') {
+            return alert('All fields required');
+        };
+
         if (password !== confirmPassword) {
             alert('Passwords do not match');
             return;

@@ -15,7 +15,7 @@ const ShopCategories = ({
         const priceList = data.map(el => el.data.price);
         setMinPrice(Math.min(...priceList));
         setMaxPrice(Math.max(...priceList));
-    }, [data])
+    }, [data]);
 
     const onCategoryClick = (e) => {
         setInputRangeValue(maxPrice);

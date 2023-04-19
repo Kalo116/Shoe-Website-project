@@ -6,6 +6,8 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 import { ShoesContext } from '../../contexts/shoes.context';
 import { UserContext } from '../../contexts/user.context';
 
+import { Comments } from './comments-component/comments.component';
+
 import './details.styles.scss';
 
 export const Details = () => {
@@ -40,27 +42,30 @@ export const Details = () => {
             </h1>
             {
                 shoeDetails
-                    ? <div className='details-container'>
-                        <div className="details-img-wrapper">
-                            <img src={shoeDetails.data?.img} alt="nothing" />
+                    ?
+                    <>
+                        <div className='details-container'>
+                            <div className="details-img-wrapper">
+                                <img src={shoeDetails.data?.img} alt="shoe-img" />
+                            </div>
+
+                            <div className="details-info">
+
+                                <span>Name: {shoeDetails.data?.name}</span>
+                                <span>Price: ${shoeDetails.data?.price}</span>
+                                <span>Category: {shoeDetails.data?.category}</span>
+
+                                {
+                                    currentUser?.uid === shoeDetails.data?.ownerID &&
+                                    <div className="details-buttons">
+                                        <Link to={`/shop/edit/${shoeDetails.id}`}>Edit</Link>
+                                        <button onClick={onDeleteClickHandler}>Delete</button>
+                                    </div>
+                                }
+                            </div>
                         </div>
-
-                        <div className="details-info">
-
-                            <span>Name: {shoeDetails.data?.name}</span>
-                            <span>Price: ${shoeDetails.data?.price}</span>
-                            <span>Category: {shoeDetails.data?.category}</span>
-
-                            {
-                                currentUser?.uid === shoeDetails.data?.ownerID &&
-                                <div className="details-buttons">
-                                    <Link to={`/shop/edit/${shoeDetails.id}`}>Edit</Link>
-                                    <button onClick={onDeleteClickHandler}>Delete</button>
-                                </div>
-                            }
-                        </div>
-
-                    </div>
+                        {currentUser && <Comments shoeID={shoeID} comments={shoeDetails.data?.comments} />}
+                    </>
                     : <div className="no-info">
                         <span className="loader"></span>
                     </div>

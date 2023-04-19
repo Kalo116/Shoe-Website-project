@@ -20,8 +20,6 @@ const defaultFormFileds = {
 export const EditProduct = () => {
 
     const [formFields, setFormFields] = useState(defaultFormFileds);
-    const [editedItem, setEditedItem] = useState({});
-
     const { name, price, category, img } = formFields;
 
     const { shoeID } = useParams();
@@ -32,7 +30,6 @@ export const EditProduct = () => {
 
     useEffect(() => {
         const editedItemDetails = data.filter((el) => el.id === shoeID)[0];
-        setEditedItem(editedItemDetails);
         setFormFields({
             name: editedItemDetails?.data.name,
             price: Number(editedItemDetails?.data.price),
@@ -53,11 +50,11 @@ export const EditProduct = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (name === '' || price === '' || category === '' || img === '') {
-            return alert('All fields required!')
+            return alert('All fields required!');
         };
 
         if (!currentUser) {
-            return alert('You need to be logged to create shoe card!')
+            return alert('You need to be logged to create shoe card!');
         };
 
         const docRef = doc(db, 'shoes', shoeID);
@@ -78,7 +75,7 @@ export const EditProduct = () => {
     return (
         <div id="create" >
             <h2 className='create-title'>Edit Your Shoe-Card</h2>
-            {editedItem
+            {formFields
                 ? <div className="create-product-container">
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">

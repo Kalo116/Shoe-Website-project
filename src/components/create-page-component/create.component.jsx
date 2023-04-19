@@ -17,8 +17,9 @@ const defaultFormFileds = {
 
 export const CreateProduct = () => {
     const [formFields, setFormFields] = useState(defaultFormFileds);
-    const { name, price, category, img } = formFields;
     const { currentUser } = useContext(UserContext);
+
+    const { name, price, category, img } = formFields;
     const navigate = useNavigate();
 
 
@@ -47,6 +48,7 @@ export const CreateProduct = () => {
             category,
             ownerID: currentUser.uid,
             id: generateRandomID(),
+            comments: []
         })
             .then(() => {
                 setFormFields(defaultFormFileds);

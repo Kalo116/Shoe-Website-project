@@ -1,0 +1,23 @@
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+
+    .comment-input {
+        padding: 35px 25px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+    }
+
+    .comment-submit-btn {
+        border-radius: 7px;
+        color: #fff;
+        background: linear-gradient(144deg, rgb(165, 129, 255) 38%, rgb(252, 120, 127) 73%);
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        border: none;
+        outline: none;
+    }
+}

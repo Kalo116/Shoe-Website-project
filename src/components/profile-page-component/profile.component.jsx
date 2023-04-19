@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import { UserContext } from "../../contexts/user.context";
 import { ShoesContext } from "../../contexts/shoes.context";
@@ -44,10 +45,11 @@ export const Profile = () => {
                         <span className="profile-gender">Gender: {currentUserData.gender}</span>
                     </div>
                 </div>
+                <h2 className="profile-post-title">My Cards</h2>
                 <div className="profile-products">
                     {myCards.length > 0
                         ? myCards.map(shoeCard => <ShopItem key={shoeCard.id} shoe={shoeCard.data} shoeId={shoeCard.id} />)
-                        : <h1 className="no-cards-title">No cards</h1>
+                        : <h1 className="no-cards-title">You don't have cards yet... Want to create some? <Link to='/create'>Click Here</Link></h1>
                     }
                 </div>
             </div>

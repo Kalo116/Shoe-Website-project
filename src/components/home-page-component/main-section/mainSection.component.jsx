@@ -1,7 +1,9 @@
 import './mainSection.styles.scss';
+import { Link } from 'react-router-dom';
 
 
 import blueShoeNike from '../../../assets/nike-blue-shoe.png';
+
 import blueArrow from '../../../assets/blue-arrow-2.png';
 import orangeArrow from '../../../assets/orange-arrow.png';
 
@@ -17,10 +19,10 @@ export const MainSection = () => {
                 <p className='main-info-description'>
                     The styles of shoe available to consumers are endless and profit also endless
                 </p>
-                <button className='main-button'>
-                    <span>Shop Now</span>
+                <Link className='main-button' to='/shop'>
+                    <span>Show All</span>
                     <i className="fa-sharp fa-solid fa-circle-arrow-right"></i>
-                </button>
+                </Link>
             </div>
 
             <div className='main-img-wrapper'>

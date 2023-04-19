@@ -9,7 +9,7 @@ export const PopularProducts = () => {
     return (
 
         <section id='popular-products'>
-            <h1 className='popular-products-title'>Popular <span>Products</span></h1>
+            <h1 className='popular-products-title'>Popular <span>Cards</span></h1>
             <div className="cards">
                 <article className="card">
                     <article className='card-img-wrapper'>
@@ -24,14 +24,6 @@ export const PopularProducts = () => {
                         <h2 className="card__title">
                             Nike Air Jordan-100
                         </h2>
-                        <div className="card__buy__info">
-                            <span className='card_price'>
-                                $199.99
-                            </span>
-                            <button className='card_button'>
-                                Add to Cart
-                            </button>
-                        </div>
                     </article>
                 </article>
 
@@ -48,14 +40,6 @@ export const PopularProducts = () => {
                         <h2 className="card__title">
                             Nike Air Jordan-100
                         </h2>
-                        <div className="card__buy__info">
-                            <span className='card_price'>
-                                $199.99
-                            </span>
-                            <button className='card_button'>
-                                Add to Cart
-                            </button>
-                        </div>
                     </article>
 
                 </article>
@@ -73,14 +57,6 @@ export const PopularProducts = () => {
                         <h2 className="card__title">
                             Nike Air Jordan-100
                         </h2>
-                        <div className="card__buy__info">
-                            <span className='card_price'>
-                                $199.99
-                            </span>
-                            <button className='card_button'>
-                                Add to Cart
-                            </button>
-                        </div>
                     </article>
 
                 </article>
@@ -98,14 +74,6 @@ export const PopularProducts = () => {
                         <h2 className="card__title">
                             Nike Air Jordan-100
                         </h2>
-                        <div className="card__buy__info">
-                            <span className='card_price'>
-                                $199.99
-                            </span>
-                            <button className='card_button'>
-                                Add to Cart
-                            </button>
-                        </div>
                     </article>
 
                 </article>

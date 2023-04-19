@@ -6,7 +6,7 @@ const ShopCategories = ({
     setFilteredShoes
 }) => {
 
-    const [inputRangeValue, setInputRangeValue] = useState(199);
+    const [inputRangeValue, setInputRangeValue] = useState(Number);
     const [search, setSearch] = useState('');
     const [maxPrice, setMaxPrice] = useState(0);
     const [minPrice, setMinPrice] = useState(0);
@@ -18,7 +18,7 @@ const ShopCategories = ({
     }, [data])
 
     const onCategoryClick = (e) => {
-        setInputRangeValue(199);
+        setInputRangeValue(maxPrice);
         const category = e.target.innerText;
         let newFilteredShoes;
         switch (category) {

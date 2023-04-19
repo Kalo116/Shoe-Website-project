@@ -76,7 +76,8 @@
 
         .about_us_button {
             border: none;
-            padding: 20px 20px;
+            // padding: 20px 20px;
+            text-decoration: none;
             border-radius: 7px;
             color: #fff;
             background: linear-gradient(144deg, rgba(165, 129, 255, 1) 38%, rgba(252, 120, 127, 1) 73%);
@@ -167,10 +168,10 @@
 }
 
 @media screen and (max-width: 800px) {
-    #about-us{
+    #about-us {
         padding: 0px 40px;
 
-        .about-us-info{
+        .about-us-info {
             margin-right: 0;
         }
     }

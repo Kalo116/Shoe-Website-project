@@ -19,7 +19,7 @@ export const FeatureProductSection = () => {
                     <i className="fa-solid fa-award"></i>
                     <div className="benefits-info">
                         <h3 className="benefits_title">
-                            Best Quality Shoes
+                            Best Quality Shoes Cards
                         </h3>
                         <p className="benefits_description">
                             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
@@ -31,7 +31,7 @@ export const FeatureProductSection = () => {
                     <i className="fa-solid fa-money-bill"></i>
                     <div className="benefits-info">
                         <h3 className="benefits_title">
-                            Best Quality Shoes
+                            Best Quantity of Shoes Cards
                         </h3>
                         <p className="benefits_description">
                             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
@@ -48,13 +48,6 @@ export const FeatureProductSection = () => {
                     <h2 className='feature-product-wrapper-title'>
                         Nike Watch Series 7
                     </h2>
-                    <div className="kon-1">
-                        <div className='kon-1-spans'>
-                            <span className='line-through'>$119.99</span>
-                            <span>$89.99</span>
-                        </div>
-                        <i className="fa-solid fa-cart-shopping kon-1-cart-i" />
-                    </div>
 
                 </div>
             </div>

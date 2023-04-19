@@ -1,0 +1,17 @@
+.comments-section-container {
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.75);
+    color: #fff;
+
+    .comments-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        color: #fff;
+        padding: 0px;
+    }
+}

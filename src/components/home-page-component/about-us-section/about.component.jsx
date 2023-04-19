@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import './about.styles.scss';
 
 import aboutShoe from '../../../assets/green-nike-shoe.png';
@@ -24,7 +26,7 @@ export const AboutSection = () => {
             <div className="about-us-info">
                 <p className="about-us-post-title">About Us</p>
                 <h2 className='about_us_title'>
-                    We Provide High Quality Shoes
+                    We Provide High Quality Shoes Cards
                 </h2>
                 <p className="about_us_details-1">
                     "Lorem ipsum dolor sit amet, consectetur
@@ -40,12 +42,12 @@ export const AboutSection = () => {
                     ut labore et dolore magna aliqua.
                 </p>
 
-                <button className="about_us_button">
+                <Link className="about_us_button" to='/shop'>
                     <span className="about_us_button_content">
                         Explore More
                     </span>
                     <i className="fa-solid fa-circle-arrow-right about-us-icon"></i>
-                </button>
+                </Link>
             </div>
         </section>
     );

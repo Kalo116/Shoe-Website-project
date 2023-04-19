@@ -40,6 +40,13 @@
         }
     }
 
+    .profile-post-title {
+        text-align: center;
+        font-size: 30px;
+        font-family: "MicroExtendFLF";
+        color: #fff;
+    }
+
     .profile-products {
         display: flex;
         gap: 2rem;
@@ -90,6 +97,16 @@
 
         .no-cards-title {
             margin: 0 auto;
+            font-size: 20px;
+
+            a{
+                text-decoration: none;
+                color: #fff;
+            }
+
+            a:hover{
+                color: rgb(80, 80, 187);
+            }
         }
     }
 }

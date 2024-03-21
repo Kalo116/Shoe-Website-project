@@ -1,4 +1,4 @@
-<h1 align="center" id="title">Shoe-Website-Project</h1>
+<h1 align="center" id="title">👟 Shoe-Website-Project 👟</h1>
 
 <p align="center"><img src="public/Screenshot_6.png" alt="project-image"></p>
 

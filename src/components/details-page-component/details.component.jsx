@@ -64,7 +64,7 @@ export const Details = () => {
                                 }
                             </div>
                         </div>
-                        {currentUser && <Comments shoeID={shoeID} comments={shoeDetails.data?.comments} />}
+                        <Comments shoeID={shoeID} comments={shoeDetails.data?.comments} user={currentUser} />
                     </>
                     : <div className="no-info">
                         <span className="loader"></span>

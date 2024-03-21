@@ -4,7 +4,7 @@ import { useContext, useState } from 'react';
 import { UserContext } from '../../contexts/user.context';
 
 import { Link, useNavigate } from 'react-router-dom';
-import { Dropdown } from './dropdownComponent/dropdown.component';
+import { Dropdown } from './DropdownComponent/Dropdown.component';
 
 import nikeLogo from '../../assets/nike.png';
 import './header.styles.scss';

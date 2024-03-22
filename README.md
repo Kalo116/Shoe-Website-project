@@ -11,12 +11,13 @@
 <h2>Project Screenshots:</h2>
 
 <img src="public/Screenshot_7.png" alt="project-screenshot" width="800" height="430/">
+<br/>
 
 <img src="public/Screenshot_8.png" alt="project-screenshot" width="800" height="430/">
+<br/>
 
 <img src="public/Screenshot_9.png" alt="project-screenshot" width="800" height="430/"> <br/>
-
-  
+<br/>
   
 <h2>🧐 Features</h2>
 

@@ -27,14 +27,14 @@ const ShopCategories = ({
                 break;
             case 'Nike Air Force 1':
                 newFilteredShoes = data.filter((shoe) => {
-                    return shoe.data.category.includes('Nike Air Force 1');
+                    return shoe.data.cat.includes('Nike Air Force 1');
                 });
                 setFilteredShoes(newFilteredShoes);
                 break;
 
             case 'Nike Air Max':
                 newFilteredShoes = data.filter((shoe) => {
-                    return shoe.data.category.includes('Nike Air Max');
+                    return shoe.data.cat.includes('Nike Air Max');
                 });
                 setFilteredShoes(newFilteredShoes);
                 break;
@@ -42,7 +42,7 @@ const ShopCategories = ({
 
             case 'Nike Air Zoom':
                 newFilteredShoes = data.filter((shoe) => {
-                    return shoe.data.category.includes('Nike Air Zoom');
+                    return shoe.data.cat.includes('Nike Air Zoom');
                 });
                 setFilteredShoes(newFilteredShoes);
                 break;
@@ -50,7 +50,7 @@ const ShopCategories = ({
 
             case 'Nike Air Jordan 1':
                 newFilteredShoes = data.filter((shoe) => {
-                    return shoe.data.category.includes('Nike Air Jordan 1');
+                    return shoe.data.cat.includes('Nike Air Jordan 1');
                 });
                 setFilteredShoes(newFilteredShoes);
                 break;
@@ -58,7 +58,7 @@ const ShopCategories = ({
 
             case 'Nike Dunk':
                 newFilteredShoes = data.filter((shoe) => {
-                    return shoe.data.category.includes('Nike Dunk');
+                    return shoe.data.cat.includes('Nike Dunk');
                 });
                 setFilteredShoes(newFilteredShoes);
                 break;
@@ -74,7 +74,7 @@ const ShopCategories = ({
         const searchField = e.target.value.toLocaleLowerCase();
         setSearch(searchField);
         const searchFilter = data.filter((shoe) => {
-            return shoe.data.category.toLocaleLowerCase().includes(searchField);
+            return shoe.data.cat.toLocaleLowerCase().includes(searchField);
         })
         setFilteredShoes(searchFilter);
     };

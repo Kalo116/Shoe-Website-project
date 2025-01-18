@@ -53,7 +53,7 @@ export const Details = () => {
 
                                 <span>Name: {shoeDetails.data?.name}</span>
                                 <span>Price: ${shoeDetails.data?.price}</span>
-                                <span>Category: {shoeDetails.data?.category}</span>
+                                <span>Category: {shoeDetails.data?.cat}</span>
 
                                 {
                                     currentUser?.uid === shoeDetails.data?.ownerID &&

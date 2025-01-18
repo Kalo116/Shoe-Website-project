@@ -45,7 +45,7 @@ export const CreateProduct = () => {
             name,
             img,
             price: Number(price),
-            category,
+            cat: category,
             ownerID: currentUser.uid,
             id: generateRandomID(),
             comments: []

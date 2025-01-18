@@ -17,13 +17,13 @@ import {
 } from 'firebase/firestore';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyB7afSFrY6mdemfEA7jear10mJS9Kd-ZNE",
+    apiKey: "AIzaSyDwNpNcbrIqKvu9GCBj7s_EJumxceYs6oA",
     authDomain: "shoe-shop-website.firebaseapp.com",
-    projectId: "softuni-project-defence",
-    storageBucket: "softuni-project-defence.appspot.com",
-    messagingSenderId: "727872999048",
-    appId: "1:727872999048:web:e9c494a87d3fc1ad81193d"
-  };
+    projectId: "shoe-shop-website",
+    storageBucket: "shoe-shop-website.firebasestorage.app",
+    messagingSenderId: "988561986146",
+    appId: "1:988561986146:web:09c589c5f64c59cc85773b"
+};
 
 const app = initializeApp(firebaseConfig);
 

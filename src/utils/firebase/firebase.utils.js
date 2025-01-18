@@ -18,7 +18,7 @@ import {
 
 const firebaseConfig = {
     apiKey: "AIzaSyB7afSFrY6mdemfEA7jear10mJS9Kd-ZNE",
-    authDomain: "softuni-project-defence.firebaseapp.com",
+    authDomain: "shoe-shop-website.firebaseapp.com",
     projectId: "softuni-project-defence",
     storageBucket: "softuni-project-defence.appspot.com",
     messagingSenderId: "727872999048",

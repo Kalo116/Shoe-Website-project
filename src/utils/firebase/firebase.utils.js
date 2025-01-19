@@ -34,7 +34,17 @@ googleProvider.setCustomParameters({
 });
 
 export const auth = getAuth();
-export const signInWithGooglePopup = () => signInWithPopup(auth, googleProvider);
+export const signInWithGooglePopup = async () => {
+    const result = await signInWithPopup(auth, googleProvider);
+    
+    const gender = window.prompt('Please select your gender (Male/Female):');
+    
+    if (result.user) {
+        await createUserDocument(result.user, { gender });
+    }
+    
+    return result;
+};
 
 export const db = getFirestore();
 

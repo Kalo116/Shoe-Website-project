@@ -33,7 +33,7 @@ export const EditProduct = () => {
         setFormFields({
             name: editedItemDetails?.data.name,
             price: Number(editedItemDetails?.data.price),
-            category: editedItemDetails?.data.category,
+            category: editedItemDetails?.data.cat,
             img: editedItemDetails?.data.img
         });
     }, [data, shoeID]);
@@ -62,7 +62,7 @@ export const EditProduct = () => {
             name,
             img,
             price: Number(price),
-            category,
+            cat: category,
             ownerID: currentUser.uid,
             id: generateRandomID(),
         })

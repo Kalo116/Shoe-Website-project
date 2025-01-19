@@ -17,6 +17,7 @@ export const Details = () => {
     const { currentUser } = useContext(UserContext);
     const navigate = useNavigate();
 
+    console.log(currentUser);
     useEffect(() => {
         const shoeDetailsItem = data.filter((el) => el.id === shoeID);
         setShoeDetails(shoeDetailsItem[0]);
@@ -56,7 +57,7 @@ export const Details = () => {
                                 <span>Category: {shoeDetails.data?.cat}</span>
 
                                 {
-                                    currentUser?.uid === shoeDetails.data?.ownerID &&
+                                    currentUser && currentUser.uid && currentUser.uid === shoeDetails.data?.ownerID &&
                                     <div className="details-buttons">
                                         <Link to={`/shop/edit/${shoeDetails.id}`}>Edit</Link>
                                         <button onClick={onDeleteClickHandler}>Delete</button>
